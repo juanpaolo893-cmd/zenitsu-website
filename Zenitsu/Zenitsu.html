@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ZENITSU</title>
+        <link rel="stylesheet" href="Zenitsu.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Zenitsu Agatsuma</h1>
+           
+            <img src="zenitsu-agatsuma-3840x2160-23643.jpg" 
+            alt="Zenitsu" 
+            class="profile-picture">
+            
+            <p class="intro">
+                <span id="zenitsuName" class="highlight-name">Zenitsu Agatsuma</span> is a character from the anime and manga series 
+                             "Demon Slayer: Kimetsu no Yaiba."
+            </p>
+           
+            <div class="video-wrapper">
+                <video id="zenitsuVideo" controls>
+                    <source src="Zenitsu God-like speed 60fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <p class="ability">He is known for his exceptional speed and agility, as well as his unique
+                               fighting style that incorporates thunder and lightning techniques.
+            </p>
+           
+            <p class="personality">Despite his cowardly and anxious personality, Zenitsu is a skilled 
+                                   swordsman and a valuable member of the Demon Slayer Corps.
+            </p>
+             <form>
+                <label for="email">Subscribe to my newsletter:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+                <br>
+                <input type="checkbox" id="updates" name="updates">
+                <label for="updates">I want to receive updates about new Kimetsu no Yaiba content</label>
+            </form>
+        </div>
+<!-- ===== JavaScript goes here ===== -->
+<script>
+  const video = document.getElementById("zenitsuVideo");
+  const name = document.getElementById("zenitsuName");
+
+  // Add/remove glow when video plays/pauses/ends
+  video.addEventListener("play", () => {
+    name.classList.add("glow-active");      // name glow
+    video.classList.add("video-glow");      // video border glow
+  });
+
+  video.addEventListener("pause", () => {
+    name.classList.remove("glow-active");
+    video.classList.remove("video-glow");
+  });
+
+  video.addEventListener("ended", () => {
+    name.classList.remove("glow-active");
+    video.classList.remove("video-glow");
+  });
+</script>
+    </body>
+</html>
